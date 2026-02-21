@@ -24,8 +24,5 @@ dist-ssr
 *.sw?
 .tanstack
 
-# Generated files
-*.gen.ts
-
 # Environment variables
 *.env
