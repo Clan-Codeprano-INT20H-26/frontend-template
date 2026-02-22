@@ -7,7 +7,16 @@ export const NotFound = () => {
   const navigate = useNavigate();
 
   return (
-    <Stack justifyContent="center" alignItems="center" gap={3} height="100vh">
+    <Stack justifyContent="center" alignItems="center" height="100vh" gap={3}>
+      <img
+        src="/not-found.png"
+        alt="Not Found"
+        style={{
+          width: 700,
+          height: 'auto',
+          opacity: 0.5,
+        }}
+      />
       <Typography variant="h3">
         Oops! We couldn't find the page you were looking for.
       </Typography>
@@ -16,7 +25,7 @@ export const NotFound = () => {
           variant="outlined"
           color="secondary"
           size="large"
-          sx={{ px: 3, py: 1 }}
+          sx={{ px: 5 }}
           onClick={() => navigate({ to: '/' })}
         >
           <Typography variant="h6">Home</Typography>
@@ -25,7 +34,7 @@ export const NotFound = () => {
           variant="contained"
           color="primary"
           size="large"
-          sx={{ px: 3, py: 1 }}
+          sx={{ px: 5 }}
           onClick={() => history.back()}
         >
           <Typography variant="h6">Go back</Typography>
