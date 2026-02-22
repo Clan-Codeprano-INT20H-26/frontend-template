@@ -10,6 +10,14 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const defaultTheme = createTheme({
     palette: defaultPalette,
     typography: defaultTypography,
+    components: {
+      MuiButtonBase: {
+        defaultProps: {
+          disableRipple: true,
+          disableTouchRipple: true,
+        },
+      },
+    },
   });
 
   return <MUIThemeProvider theme={defaultTheme}>{children}</MUIThemeProvider>;
